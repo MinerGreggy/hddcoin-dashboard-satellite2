@@ -37,3 +37,4 @@ A Changelog can be found [here](https://github.com/MinerGreggy/hddcoin-dashboard
 ## License
 
 GNU GPLv3 (see [LICENSE](https://github.com/MinerGreggy/hddcoin-dashboard-satellite/blob/master/LICENSE))
+
