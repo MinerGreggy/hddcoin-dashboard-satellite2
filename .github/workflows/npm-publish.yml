@@ -45,7 +45,7 @@ jobs:
         with:
           files: 'release-archive-*/*.zip'
           repo-token: ${{ secrets.GITHUB_TOKEN }}
-          release-tag: ${{ steps.tag.outputs.TAG }}
+          #release-tag: ${{ steps.tag.outputs.TAG }}
       - uses: flood-io/is-published-on-npm@v1
         id: is-published
       - name: Upadate Release Tags
