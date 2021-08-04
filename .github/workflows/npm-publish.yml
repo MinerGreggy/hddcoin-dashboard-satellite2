@@ -36,19 +36,12 @@ jobs:
    runs-on: ubuntu-latest
    needs: build
    steps:
-      - name: Fetch release archives
-        uses: actions/download-artifact@v2
-      - name: Get the tag name
-        id: tag
-        run: echo ::set-output name=TAG::${GITHUB_REF/refs\/tags\//}
-      - name: Create github release
-        uses: felixbrucker/github-actions/publish-release@master
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          args: --name HDDCoin-Dashboard-Satellite
+      - name: Download Files For Adding To The Release Assets
+        uses: actions/download-artifact@v2}
       - uses: AButler/upload-release-assets@v2.0
         with:
           files: 'release-archive-*/*.zip'
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
-          release-tag: ${{ steps.tag.outputs.TAG }}
+          repo-token: ${{ secrets.GITHUB_TOKEN }}  
+
+
+          
