@@ -8,10 +8,10 @@ on:
 jobs:
 
 
-release-npm:
-  runs-on: ubuntu-latest
-  needs: build
-  steps:
+ release-npm:
+   runs-on: ubuntu-latest
+   needs: build
+   steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
       - uses: flood-io/is-published-on-npm@v1
