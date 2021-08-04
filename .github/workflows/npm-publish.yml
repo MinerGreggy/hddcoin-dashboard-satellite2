@@ -36,16 +36,14 @@ jobs:
           name: release-archive-${{ matrix.os }}
           path: build/*.zip
 
-  release-npm:
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: Checkout Repo
+release-npm:
+  runs-on: ubuntu-latest
+  steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
       - uses: flood-io/is-published-on-npm@v1
         id: is-published
-      - name: Check If Release Verion And Update Tags/Releases
+      - name: Upadate Release Tags
         if: ${{ steps.is-published.outputs.published == 'false' }}
         uses: actions/create-release@v1
         env:
