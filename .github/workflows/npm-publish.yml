@@ -40,9 +40,13 @@ jobs:
         uses: actions/download-artifact@v2
       - name: View Downloaded Content
         run: ls -R
+      - name: Get the tag name
+        id: tag
+        run: echo ::set-output name=TAG::${GITHUB_REF/refs\/tags\//}
       - uses: AButler/upload-release-assets@v2.0
         with:
           files: 'release-archive-*/*.zip'
           repo-token: ${{ secrets.GITHUB_TOKEN }}  
+          release-tag: ${{ steps.tag.outputs.TAG }}
 
 
