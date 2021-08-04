@@ -38,6 +38,9 @@ jobs:
    steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
+      - name: Get the tag name
+        id: tag
+        run: echo ::set-output name=TAG::${GITHUB_REF/refs\/tags\//}
       - uses: AButler/upload-release-assets@v2.0
         with:
           files: 'release-archive-*/*.zip'
