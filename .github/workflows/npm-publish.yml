@@ -25,7 +25,7 @@ jobs:
       - uses: flood-io/is-published-on-npm@v1
         id: is-published   
       - name: Check If Version Release And Updates Assets
-        #if: ${{ steps.is-published.outputs.published == 'false' }}       
+             
       - name: yarn install
         run: yarn install
       - name: Package release archive
