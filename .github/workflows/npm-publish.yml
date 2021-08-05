@@ -1,5 +1,5 @@
 
-name: npm-publish
+name: Release-Build-Publish
 
 on:
   push:
