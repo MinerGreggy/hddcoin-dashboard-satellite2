@@ -37,12 +37,11 @@ jobs:
    runs-on: ubuntu-latest
    #needs: build
    steps:
-      - name: Get the tag name
-        uses: oprypin/find-latest-tag@v1
+      - uses: oprypin/find-latest-tag@v1
         with:
-         repository:  MinerGreggy/hddcoin-dashboard-satellite  # The repository to scan.
-         releases-only: true  # We know that all relevant tags have a GitHub release for them.
-        id: result  # The step ID to refer to later.
+         repository:  MinerGreggy/hddcoin-dashboard-satellite
+         releases-only: true
+        id: result 
       - run: echo "Dashboard is at version ${{ steps.result.outputs.tag }}"
       - name: Download Files For Adding To The Release Assets
         uses: actions/download-artifact@v2
