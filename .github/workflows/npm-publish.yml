@@ -4,8 +4,8 @@ name: npm-publish
 on:
   push:
     branches:
-      - main # Change this to your default branch
-      
+      - main
+
 jobs:
  build:
     name: Build
@@ -40,7 +40,7 @@ jobs:
       - name: Get the tag name
         id: tag
          #$(echo ${GITHUB_REF:10})
-        run: echo ::set-output name=TAG::${GITHUB_REF/refs\/tags\//}
+        run: echo ::set-output name=TAG::${GITHUB_REF:10}
       - name: Download Files For Adding To The Release Assets
         uses: actions/download-artifact@v2
       - name: View Downloaded Content
