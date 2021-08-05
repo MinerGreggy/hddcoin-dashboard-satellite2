@@ -3,8 +3,8 @@ name: npm-publish
 
 on:
   push:
-    branches:
-      - main
+    tags:
+      - 'v*.*.*'
 jobs:
  build:
     name: Build
@@ -36,15 +36,7 @@ jobs:
    runs-on: ubuntu-latest
    needs: build
    steps:
-      - name: Extract tag name
-        id: tag
-        uses: actions/github-script@0.2.0
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          script: |
-            return context.payload.ref.replace(/\/refs\/tags\//, '');
-      - name: Echo
-        run: echo ${{ steps.tag.outputs.result }}
+   
       - name: Download Files For Adding To The Release Assets
         uses: actions/download-artifact@v2
       - name: View Downloaded Content
@@ -54,7 +46,7 @@ jobs:
         with:
           files: 'release-archive-*/*.zip'
           repo-token: ${{ secrets.GITHUB_TOKEN }}
-          release-tag: ${{ steps.tag.outputs.TAG }}
+          release-tag: 1.12.3
 
 
 
