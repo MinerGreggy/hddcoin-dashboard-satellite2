@@ -41,18 +41,18 @@ jobs:
         with:
          repository:  MinerGreggy/hddcoin-dashboard-satellite
          releases-only: true
-        id: result 
-      - run: echo "Dashboard is at version ${{ steps.result.outputs.tag }}"
-      - name: Download Files For Adding To The Release Assets
-        uses: actions/download-artifact@v2
-      - name: View Downloaded Content
-        run: ls -R
+        id: tag 
+      - run: echo "Dashboard is at version ${{ steps.tag.outputs.tag }}"
+      #- name: Download Files For Adding To The Release Assets
+      #  uses: actions/download-artifact@v2
+      #- name: View Downloaded Content
+      #  run: ls -R
       #- name: Upload binaries to release
       #  uses: AButler/upload-release-assets@v2.0
       #  with:
-      #    files: 'release-archive-*/*.zip'
-      #    repo-token: ${{ secrets.GITHUB_TOKEN }}
-       #   release-tag: ${{ steps.tag.outputs.TAG }}
+       #   files: 'release-archive-*/*.zip'
+        #  repo-token: ${{ secrets.GITHUB_TOKEN }}
+         # release-tag: ${{ steps.tag.outputs.tag }}
 
 
 
