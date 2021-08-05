@@ -36,7 +36,10 @@ jobs:
    runs-on: ubuntu-latest
    needs: build
    steps:
-   
+      - name: Get the tag name
+        id: tag
+         #$(echo ${GITHUB_REF:10})
+        run: echo ::set-output name=TAG::${GITHUB_REF/refs\/tags\//}
       - name: Download Files For Adding To The Release Assets
         uses: actions/download-artifact@v2
       - name: View Downloaded Content
@@ -46,7 +49,7 @@ jobs:
         with:
           files: 'release-archive-*/*.zip'
           repo-token: ${{ secrets.GITHUB_TOKEN }}
-          release-tag: 1.12.3
+          release-tag: ${{ steps.tag.outputs.TAG }}
 
 
 
