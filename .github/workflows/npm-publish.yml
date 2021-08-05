@@ -46,7 +46,7 @@ jobs:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           file: 'release-archive-*/*.zip'
           asset_name: ${{ matrix.asset_name }}
-          tag: ${{ github.ref }
+          tag: 1.12.3
 
 
 
