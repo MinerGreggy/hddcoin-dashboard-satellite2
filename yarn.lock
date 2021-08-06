@@ -513,10 +513,10 @@ has@^1.0.3:
   dependencies:
     function-bind "^1.1.1"
 
-hddcoin-api@^2.2.4:
-  version "2.2.4"
-  resolved "https://registry.yarnpkg.com/hddcoin-api/-/hddcoin-api-2.2.4.tgz#b4662cd7529f1d641b18fe5c9a59d7020bb79462"
-  integrity sha512-3b0hOmm2VjMBnPHBBR5f5goE7zHHF1UF83j4jWSEi66XGZ0me2N5ns5MLculVYQhm0mkKlBH86RNbSCO1gLqeA==
+hddcoin-api@^2.2.5:
+  version "2.2.5"
+  resolved "https://registry.yarnpkg.com/hddcoin-api/-/hddcoin-api-2.2.5.tgz#f17215179195341fd527aca71a7e9a1415be0d0a"
+  integrity sha512-oL8kA3rwpUisaLnX0WvlHRYpycnKrvmuBwNPXTQsb+Ryra8lF0/GX/aHldfeMwPFfaKtv53mIjpNjRHPeemBqg==
   dependencies:
     json-bigint "^1.0.0"
     ws "^7.5.0"
