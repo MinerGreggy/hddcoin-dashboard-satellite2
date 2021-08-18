@@ -200,6 +200,14 @@ chalk@^4.1.0:
     ansi-styles "^4.1.0"
     supports-color "^7.1.0"
 
+chia-api@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/chia-api/-/chia-api-2.1.0.tgz#6a683b46adb9a1b1c934c90890384067911a7123"
+  integrity sha512-yfYlWEVcW+JiKjbJWVaNTh1LjTWPZwH9i2bxQI6ajAJy0ZV0ZBewFDtTHhkJNOt0MADTvNY559z/SGjcUFcsWw==
+  dependencies:
+    json-bigint "^1.0.0"
+    ws "^7.5.0"
+
 chownr@^1.1.1:
   version "1.1.4"
   resolved "https://registry.yarnpkg.com/chownr/-/chownr-1.1.4.tgz#6fc9d7b42d32a583596337666e7d08084da2cc6b"
@@ -512,14 +520,6 @@ has@^1.0.3:
   integrity sha512-f2dvO0VU6Oej7RkWJGrehjbzMAjFp5/VKPp5tTpWIV4JHHZK1/BxbFRtf/siA2SWTe09caDmVtYYzWEIbBS4zw==
   dependencies:
     function-bind "^1.1.1"
-
-hddcoin-api@^2.2.5:
-  version "2.2.5"
-  resolved "https://registry.yarnpkg.com/hddcoin-api/-/hddcoin-api-2.2.5.tgz#f17215179195341fd527aca71a7e9a1415be0d0a"
-  integrity sha512-oL8kA3rwpUisaLnX0WvlHRYpycnKrvmuBwNPXTQsb+Ryra8lF0/GX/aHldfeMwPFfaKtv53mIjpNjRHPeemBqg==
-  dependencies:
-    json-bigint "^1.0.0"
-    ws "^7.5.0"
 
 https-proxy-agent@^5.0.0:
   version "5.0.0"
